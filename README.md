@@ -1,3 +1,161 @@
+# Advanced Data Mining Project
+
+![Data Mining](https://img.shields.io/badge/Data-Mining-blue)
+![Python](https://img.shields.io/badge/Python-3.8%2B-success)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-important)
+
+A comprehensive data analysis platform implementing four key data mining algorithms with an interactive interface.
+
+## Table of Contents
+
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Algorithms](#algorithms)
+- [Project Structure](#project-structure)
+- [License](#license)
+- [Contributing](#contributing)
+- [Contact](#contact)
+
+## Features
+
+- **Four Core Algorithms**:
+  - 🛒 Apriori (Association Rule Mining)
+  - 🧠 Naive Bayes (Classification)
+  - 🌳 ID3 Decision Tree
+  - 📊 K-Means Clustering
+- Interactive Web UI using Streamlit
+- Automatic documentation generation
+- Visualizations for all algorithms
+- Customizable parameters for each algorithm
+
+## Requirements
+
+- Python 3.8+
+- Required Packages:
+- streamlit==1.26.0
+- pandas==2.0.3
+- numpy==1.24.3
+- scikit-learn==1.3.0
+- mlxtend==0.22.0
+- matplotlib==3.7.2
+- seaborn==0.12.2
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/radanpro/data-mining.git
+cd data-mining
+```
+
+Create and activate virtual environment (recommended):
+
+```bash
+python -m venv venv
+```
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### Mac/Linux
+
+```bash
+source venv/bin/activate
+```
+
+## Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+#### Start the application:
+
+```bash
+streamlit run app.py
+```
+
+## Workflow:
+
+1.  Upload CSV dataset
+
+2.  Navigate through algorithm sections
+
+3.  Adjust parameters using sliders
+
+4.  View interactive results and visualizations
+
+5.  Check generated documentation in documentation.md
+
+#### Example Dataset Format:
+
+Age Income Gender Purchased
+25 50000 Male No
+30 70000 Female Yes
+
+Algorithms
+
+1. Apriori (Association Rule Mining)
+   -Finds relationships between items in transactions
+   -Configurable support and confidence levels
+   -Outputs rules with lift metric
+
+2. Naive Bayes Classifier
+   -Probabilistic classification model
+   -Shows accuracy and confusion matrix
+   -Displays feature importance
+
+3. ID3 Decision Tree
+   -Implements information gain strategy
+   -Visualizes decision tree structure
+   -Displays classification rules
+
+4. K-Means Clustering
+   -Unsupervised clustering algorithm
+   -Elbow method visualization
+   -Silhouette score evaluation
+   -Project Structure
+
+## Project Structure
+
+```
+data-mining-project/
+├── app.py # Main application code
+├── documentation.md # Auto-generated documentation
+├── plots/ # Saved visualizations
+├── dataset.scv
+└── requirements.txt # Dependency list
+```
+
+## Contributing
+
+Fork the repository
+
+Create your feature branch (`git checkout -b feature/AmazingFeature`)
+
+Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+
+Push to the branch (`git push origin feature/AmazingFeature`)
+
+Open a Pull Request
+<br>
+<br>
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
 # README - Data Mining Project
 
 ## **1. Dataset Contents**
@@ -36,8 +194,10 @@ The goal of this project is to perform data mining on the provided dataset to:
 
 1. **Frequent Itemset Analysis**: Using the Apriori algorithm to discover patterns and rules such as "products frequently sold together."
 2. **Classification Results**:
-   - Predict the priority level of orders based on attributes.
-   - Evaluate model accuracy using metrics like Precision, Recall, and F1-Score.
+
+- Predict the priority level of orders based on attributes.
+- Evaluate model accuracy using metrics like Precision, Recall, and F1-Score.
+
 3. **Cluster Analysis**: Group sales data into clusters for better segmentation (e.g., high-profit vs. low-profit orders).
 4. **Insights and Recommendations**: Actionable insights based on analysis results to optimize sales and improve decision-making.
 
@@ -122,8 +282,10 @@ Data mining is essential for this project to:
 
 1. **تحليل العناصر المتكررة:** استخدام خوارزمية Apriori لاكتشاف الأنماط والقواعد مثل "المنتجات التي تُباع معًا بشكل متكرر".
 2. **نتائج التصنيف:**
-   - التنبؤ بمستوى أولوية الطلبات بناءً على الخصائص.
-   - تقييم دقة النموذج باستخدام مقاييس مثل الدقة (Accuracy)، والاستدعاء (Recall)، وF1-Score.
+
+- التنبؤ بمستوى أولوية الطلبات بناءً على الخصائص.
+- تقييم دقة النموذج باستخدام مقاييس مثل الدقة (Accuracy)، والاستدعاء (Recall)، وF1-Score.
+
 3. **تحليل التجمعات (Clusters):** تقسيم بيانات المبيعات إلى مجموعات لتحسين التقسيم (مثل الطلبات ذات الربح العالي مقابل الربح المنخفض).
 4. **رؤى وتوصيات:** تقديم رؤى قابلة للتنفيذ بناءً على نتائج التحليل لتحسين اتخاذ القرارات.
 
@@ -159,3 +321,7 @@ Data mining is essential for this project to:
 - يمكن استخدام أدوات تعاون مثل **Trello** أو **Jira** لتتبع التقدم وضمان تواصل فعال.
 - يجب توثيق الكود وجعله معياريًا لضمان إمكانية إعادة الإنتاج.
 - المخرجات النهائية تشمل تقريرًا كاملًا، الشيفرة المصدرية، ورسوم بيانية للنتائج.
+
+```
+
+```
