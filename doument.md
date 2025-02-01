@@ -7,18 +7,24 @@
 - **Step 1:** Converting Commas to Semicolons in the Dataset  
   **Objective:** Ensure the dataset is properly formatted by replacing all semicolons (;) with commas (,).
 
-- **Step 2:** Checking for Outliers, Missing Values, and Special Characters  
-  **Objective:** Ensure the data quality by identifying and handling the following issues:
+- **Step 2:** Clean the "Country" Column Data
+  **Objective**: Ensure data quality by addressing issues with special characters. In our database, we found that the value "Cote d'Ivoire" in the "Country" column contains an apostrophe, which is causing an error in the Wiki.
 
-  - **Outliers:** Perform statistical analysis (such as interquartile range or z-score) to detect extreme data points that may affect model performance.
-  - **Missing Values:** Identify missing entries and handle them through appropriate methods, such as imputation (mean, median, or mode) or row removal when necessary.
-  - **Special Characters:** Detect and clean special characters such as the apostrophe in entries like "Cote d'Ivoire" to avoid parsing errors. These can be replaced by suitable alternatives (e.g., removing the apostrophe or using escape sequences).
+  **Problem**: The value "Cote d'Ivoire" includes an apostrophe that leads to errors during data analysis or query execution.
 
-  **Steps Taken:**
+- **Step** 3: Re-encoding the "Order Priority" Column
+  We performed re-encoding of the textual values in the "Order Priority" column into numerical values to facilitate processing by machine learning algorithms.
 
-  - Applied functions to identify and visualize outliers.
-  - Used conditional checks to replace or remove missing values.
-  - Implemented a find-and-replace mechanism for problematic characters.
+  The values were transformed as follows:
+
+  ```
+  Critical → 3
+  High → 2
+  Medium → 1
+  Low → 0
+  ```
+
+  This step was necessary because some algorithms, such as Naïve Bayes and K-Means, require numerical data for analysis and processing.
 
 ## Algorithm Implementation
 
