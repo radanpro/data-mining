@@ -114,6 +114,19 @@ by:
 </div>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ### **Algorithm and Reasoning:**
 
@@ -125,6 +138,30 @@ The Apriori algorithm is used to identify frequent itemsets in a dataset and gen
 - **Confidence Threshold:** The likelihood that a rule is true for the dataset. A threshold of 0.5 means we are interested in rules where the likelihood is at least 50%.
 - **Lift:** Measures the importance of a rule. Lift > 1 indicates a strong association.
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -155,6 +192,7 @@ The Apriori algorithm is used to identify frequent itemsets in a dataset and gen
   <img src="./images/Confusion Matrix.png" alt="Naïve Step 3" width="48%">
   <img src="./images/Naïve4.png" alt="Naïve Step 3" width="50%">
 </div>
+<br>
 
 ### **Algorithm and Reasoning:**
 
