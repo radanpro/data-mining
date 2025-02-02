@@ -147,27 +147,6 @@ The Apriori algorithm is used to identify frequent itemsets in a dataset and gen
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 ### Naïve Bayes (Classification)
 
@@ -214,6 +193,9 @@ Naïve Bayes is a probabilistic classification algorithm based on Bayes' Theorem
 ---
 
 <br>
+<br>
+<br>
+<br>
 
 ### ID3 Algorithm (Decision Trees)
 
@@ -241,6 +223,13 @@ Naïve Bayes is a probabilistic classification algorithm based on Bayes' Theorem
   <img src="./images/K-Means1.png" alt="K-Means Step 2" width="48%">
 </div>
 <h2>Silhouette Score: 0.60 </h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
