@@ -195,32 +195,43 @@ class MainApp:
                 
                 # Naive Bayes Section
                 st.subheader("Step 2: Classification (Naive Bayes)")
-                st.write("### Preprocessing for Naive Bayes")
+                st.write("#### Preprocessing for Naive Bayes")
                 
                 nb_data, label_encoders = self.naive_bayes.preprocess(data)
                 
-                st.write("### Processed Data for Naive Bayes")
+                st.write("#### Processed Data for Naive Bayes")
                 st.dataframe(nb_data.head())
                 
                 target_col_nb = st.selectbox("Select Target Variable", nb_data.columns, key="nb_target")
                 feature_cols_nb = st.multiselect("Select Feature Columns", nb_data.columns, key="nb_features")
                 
+                # إضافة تحديد نسبة التدريب والاختبار
+                test_size = st.slider("Select Test Size Ratio", 0, 100, 50, key="test_size")
+
                 if target_col_nb and feature_cols_nb:
                     if st.button("Run Naive Bayes"):
                         X = nb_data[feature_cols_nb]
                         y = nb_data[target_col_nb]
-                        acc, cm, report_df, probabilities = self.naive_bayes.run(X, y)
-                        
+
+                        # تقسيم البيانات بناءً على النسبة المحددة
+                        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+                        model = GaussianNB()
+                        model.fit(X_train, y_train)
+                        predictions = model.predict(X_test)
+
+                        acc = accuracy_score(y_test, predictions)
+                        cm = confusion_matrix(y_test, predictions)
+                        report = classification_report(y_test, predictions, output_dict=True)
+                        report_df = pd.DataFrame(report).transpose()
+                        probabilities = model.predict_proba(X_test)
                         st.write("### Results")
                         st.write(f"**Accuracy**: {acc:.2%}")
-                        
                         st.write("### Confusion Matrix")
                         fig, ax = plt.subplots()
                         sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", ax=ax)
                         ax.set_xlabel("Predicted")
                         ax.set_ylabel("Actual")
                         st.pyplot(fig)
-                        
                         st.write("### Classification Report")
                         st.dataframe(report_df)
                         

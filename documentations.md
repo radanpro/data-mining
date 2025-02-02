@@ -172,27 +172,11 @@ The Apriori algorithm is used to identify frequent itemsets in a dataset and gen
 ### Naïve Bayes (Classification)
 
 - **Objective:** Build a probabilistic model to classify data into predefined classes.
-- **Selected Columns:** Region, Country, Item Type, Sales Channel, Order Priority.
+- **Selected Columns:** Region, Item Type, country.
 - **Steps:**
-  - Split dataset into training (70%) and testing (30%) sets.
+  - Split dataset into training (80%) and testing (20%) sets.
   - Assumed feature independence.
   - Evaluated model using accuracy, precision, recall, and F1-score.
-
-<div style="display: flex; justify-content: space-between; padding:15px;">
-  <img src="./images/Naïve.png" alt="Naïve Step " width="48%">
-  <img src="./images/Naïve1.png" alt="Naïve Step 1" width="48%">
-</div>
-
-<div style="display: flex; justify-content: space-between; padding:15px;">
-  <img src="./images/Naïve2.png" alt="Naïve Step 2" width="48%">
-  <img src="./images/Naïve3.png" alt="Naïve Step 3" width="48%">
-</div>
-
-<div style="display: flex; justify-content: space-between; padding:15px;">
-  <img src="./images/Confusion Matrix.png" alt="Naïve Step 3" width="48%">
-  <img src="./images/Naïve4.png" alt="Naïve Step 3" width="50%">
-</div>
-<br>
 
 ### **Algorithm and Reasoning:**
 
@@ -201,10 +185,29 @@ Naïve Bayes is a probabilistic classification algorithm based on Bayes' Theorem
 **Relevant Columns:**
 
 - **Region:** Useful for understanding geographic influence on purchasing behavior.
-- **Country:** To identify differences between countries.
 - **Item Type:** To know the types of products that are bought together.
-- **Sales Channel:** To understand the differences between various sales channels (online and offline).
-- **Order Priority:** To understand how order priority affects product relationships.
+
+### **Results:**
+
+- **Accuracy:** 36.25%.
+- **Confusion Matrix:** Shows the number of correct and incorrect classifications.
+<div style="display: flex; justify-content: space-between; padding:15px;">
+  <img src="./images/Naïve.png" alt="Naïve Step " width="48%">
+  <img src="./images/Naïve1.png" alt="Naïve Step 1" width="48%">
+</div>
+
+<div style="display: flex; justify-content: space-between; padding:15px;">
+  <img src="./images/Confusion Matrix.png" alt="Confusion Matrix" width="48%">
+  <img src="./images/Naïve4.png" alt="Naïve Step 4" width="50%">
+</div>
+<br>
+
+- **Classification Report:** Includes Precision, Recall, F1-Score, and Support.
+
+<div style="display: flex; justify-content: space-between; padding:15px;">
+  <img src="./images/Naïve2.png" alt="Naïve Step 2" width="48%">
+  <img src="./images/Naïve3.png" alt="Naïve Step 3" width="48%">
+</div>
 
 <br>
 
