@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.impute import SimpleImputer
-from sklearn.metrics import accuracy_score, confusion_matrix, silhouette_score
+from sklearn.metrics import accuracy_score, confusion_matrix, silhouette_score, classification_report
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier, export_text, plot_tree
 from sklearn.cluster import KMeans
@@ -81,7 +81,10 @@ def run_naive_bayes(X, y):
     predictions = model.predict(X_test)
     acc = accuracy_score(y_test, predictions)
     cm = confusion_matrix(y_test, predictions)
-    return acc, cm
+    report = classification_report(y_test, predictions, output_dict=True)
+    report_df = pd.DataFrame(report).transpose()
+    probabilities = model.predict_proba(X_test)
+    return acc, cm, report_df, probabilities
 
 # Preprocess data for Decision Tree
 def preprocess_decision_tree(data):
@@ -199,7 +202,7 @@ def main():
                 if st.button("Run Naive Bayes"):
                     X = nb_data[feature_cols_nb]
                     y = nb_data[target_col_nb]
-                    acc, cm = run_naive_bayes(X, y)
+                    acc, cm, report_df, probabilities = run_naive_bayes(X, y)
                     
                     st.write("### Results")
                     st.write(f"**Accuracy**: {acc:.2%}")
@@ -210,6 +213,13 @@ def main():
                     ax.set_xlabel("Predicted")
                     ax.set_ylabel("Actual")
                     st.pyplot(fig)
+                    
+                    st.write("### Classification Report")
+                    st.dataframe(report_df)
+                    
+                    if st.checkbox("Show Prediction Probabilities"):
+                        st.write("### Prediction Probabilities")
+                        st.dataframe(pd.DataFrame(probabilities, columns=model.classes_))
             else:
                 st.warning("Please select a target variable and at least one feature column.")
             

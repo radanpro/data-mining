@@ -108,6 +108,10 @@ by:
 <div style="display: flex; justify-content: space-between;">
   <img src="./images/Apriori.png" alt="Apriori Step 1" width="48%">
 </div>
+<div style="display: flex; justify-content: space-between; padding:15px;">
+  <img src="./images/Apriori1.png" alt="Naïve Step " width="48%">
+  <img src="./images/Apriori2.png" alt="Naïve Step 1" width="48%">
+</div>
 <br>
 <br>
 
@@ -195,6 +199,7 @@ Naïve Bayes is a probabilistic classification algorithm based on Bayes' Theorem
   <img src="./images/K-Means.png" alt="K-Means Step 2" width="48%">
   <img src="./images/K-Means1.png" alt="K-Means Step 2" width="48%">
 </div>
+<h2>Silhouette Score: 0.60 </h2>
 <br>
 <br>
 <br>
