@@ -1,4 +1,15 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 # Documentation Data Mining
+
+<br>
+<br>
+<br>
 
 by:
 
@@ -9,14 +20,42 @@ by:
 - عبدالعزيز عبدالغني
 - ماجد النائب
 
----
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+
+#### اشراف :
+
+أ. ابراهيم الذارحي
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Data Preprocessing Steps
 
 ### Handling Delimiters
 
 - **Step 1:** Converting Commas to Semicolons in the Dataset  
- **Objective:** Ensure the dataset is properly formatted by replacing all semicolons (;) with commas (,).
+ **Objective:** Ensure the dataset is properly formatted by replacing all semicolons ( ; ) with commas (,).
 
   <div style="display: flex; justify-content: space-between;">
   <img src="./images/simicolon.png" alt="simicolon" width="48%">
@@ -45,6 +84,12 @@ by:
     <img src="./images/replaceH.png" alt="replaceH" width="48%">
     <img src="./images/replaceM.png" alt="replaceM" width="48%">
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
 ## Algorithm Implementation
 
@@ -63,8 +108,25 @@ by:
 <div style="display: flex; justify-content: space-between;">
   <img src="./images/Apriori.png" alt="Apriori Step 1" width="48%">
 </div>
+<br>
+<br>
 
----
+### **Algorithm and Reasoning:**
+
+The Apriori algorithm is used to identify frequent itemsets in a dataset and generate association rules. It helps in discovering interesting relationships between variables in large databases.
+
+**Parameters:**
+
+- **Support Threshold:** A minimum percentage of records in the dataset that contain the itemset. In our case, with 10,000 records, a support threshold of 0.05 means any itemset must appear in at least 500 transactions to be considered significant.
+- **Confidence Threshold:** The likelihood that a rule is true for the dataset. A threshold of 0.5 means we are interested in rules where the likelihood is at least 50%.
+- **Lift:** Measures the importance of a rule. Lift > 1 indicates a strong association.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ### Naïve Bayes (Classification)
 
@@ -92,7 +154,7 @@ by:
 
 ### **Algorithm and Reasoning:**
 
-Based on the code and applying the Naïve Bayes algorithm to identify relationships between products, we transformed the data into binary format (0 and 1) to simplify the analysis.
+Naïve Bayes is a probabilistic classification algorithm based on Bayes' Theorem. It assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature.
 
 **Relevant Columns:**
 
@@ -102,21 +164,11 @@ Based on the code and applying the Naïve Bayes algorithm to identify relationsh
 - **Sales Channel:** To understand the differences between various sales channels (online and offline).
 - **Order Priority:** To understand how order priority affects product relationships.
 
-### **Why did we choose min_support = 0.05?**
-
-- **Large dataset:** The data contains 10,000 records, and the minimum support value means that any product combination must appear in 0.05 × 10000 = 500 transactions to be considered significant.
-- **Avoiding noise:** Using a very low value might lead to identifying insignificant patterns. By increasing min_support, we ensure that we focus on strong and important relationships.
-
-### **Why did we set min_confidence = 0.5?**
-
-- **Confidence in detected patterns:** This means that we are interested in relationships that have a high probability of occurring. If the confidence value is lower than 0.5, the patterns might be unreliable.
-- **Identifying significant patterns:** We want to ensure that the extracted rules have high confidence to be useful in recommendations and marketing.
-
-### **Final Notes:**
-
-Converting data to binary format and choosing appropriate values for minimum support and confidence helps improve the accuracy and efficiency of the model. If you need further clarification or have any other questions, feel free to ask!
+<br>
 
 ---
+
+<br>
 
 ### ID3 Algorithm (Decision Trees)
 
@@ -143,12 +195,25 @@ Converting data to binary format and choosing appropriate values for minimum sup
   <img src="./images/K-Means.png" alt="K-Means Step 2" width="48%">
   <img src="./images/K-Means1.png" alt="K-Means Step 2" width="48%">
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Evaluation Metrics
 
-- Used metrics such as accuracy, precision, recall, F1-score, Silhouette Score, and Inertia.
+<div style="display: flex; justify-content: space-between; padding:15px;">
+  <img src="./images/feature importance.png" alt="K-Means Step 2" width="48%">
+  <img src="./images/cluster visuaiztion.png" alt="K-Means Step 2" width="48%">
+</div>
 
 ## Results and Insights
 
-- Visualizations provided insights into sales trends, classification outcomes, and cluster formations.
-- Performance scores highlighted the effectiveness of different algorithms for the dataset.
+<div style="display: flex; justify-content: space-between; padding:15px;">
+  <img src="./images/cluster distribution.png" alt="K-Means Step 2" width="48%">
+  <img src="./images/decision rules.png" alt="K-Means Step 2" width="48%">
+</div>
